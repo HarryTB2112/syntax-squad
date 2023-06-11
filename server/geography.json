@@ -1,5 +1,4 @@
-{
-  "countries": [
+[
     {
       "country": "China",
       "capital": "Beijing"
@@ -201,4 +200,3 @@
       "capital": "Luanda"
     }
   ]
-}
