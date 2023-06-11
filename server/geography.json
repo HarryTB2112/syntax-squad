@@ -1,0 +1,204 @@
+{
+  "countries": [
+    {
+      "country": "China",
+      "capital": "Beijing"
+    },
+    {
+      "country": "India",
+      "capital": "New Delhi"
+    },
+    {
+      "country": "United States",
+      "capital": "Washington, D.C."
+    },
+    {
+      "country": "Indonesia",
+      "capital": "Jakarta"
+    },
+    {
+      "country": "Pakistan",
+      "capital": "Islamabad"
+    },
+    {
+      "country": "Brazil",
+      "capital": "Brasília"
+    },
+    {
+      "country": "Nigeria",
+      "capital": "Abuja"
+    },
+    {
+      "country": "Bangladesh",
+      "capital": "Dhaka"
+    },
+    {
+      "country": "Russia",
+      "capital": "Moscow"
+    },
+    {
+      "country": "Mexico",
+      "capital": "Mexico City"
+    },
+    {
+      "country": "Japan",
+      "capital": "Tokyo"
+    },
+    {
+      "country": "Ethiopia",
+      "capital": "Addis Ababa"
+    },
+    {
+      "country": "Philippines",
+      "capital": "Manila"
+    },
+    {
+      "country": "Egypt",
+      "capital": "Cairo"
+    },
+    {
+      "country": "Vietnam",
+      "capital": "Hanoi"
+    },
+    {
+      "country": "DR Congo",
+      "capital": "Kinshasa"
+    },
+    {
+      "country": "Turkey",
+      "capital": "Ankara"
+    },
+    {
+      "country": "Iran",
+      "capital": "Tehran"
+    },
+    {
+      "country": "Germany",
+      "capital": "Berlin"
+    },
+    {
+      "country": "Thailand",
+      "capital": "Bangkok"
+    },
+    {
+      "country": "United Kingdom",
+      "capital": "London"
+    },
+    {
+      "country": "France",
+      "capital": "Paris"
+    },
+    {
+      "country": "Italy",
+      "capital": "Rome"
+    },
+    {
+      "country": "Tanzania",
+      "capital": "Dodoma"
+    },
+    {
+      "country": "South Africa",
+      "capital": "Pretoria, Cape Town, Bloemfontein"
+    },
+    {
+      "country": "Myanmar",
+      "capital": "Naypyidaw"
+    },
+    {
+      "country": "South Korea",
+      "capital": "Seoul"
+    },
+    {
+      "country": "Colombia",
+      "capital": "Bogotá"
+    },
+    {
+      "country": "Kenya",
+      "capital": "Nairobi"
+    },
+    {
+      "country": "Spain",
+      "capital": "Madrid"
+    },
+    {
+      "country": "Argentina",
+      "capital": "Buenos Aires"
+    },
+    {
+      "country": "Algeria",
+      "capital": "Algiers"
+    },
+    {
+      "country": "Ukraine",
+      "capital": "Kyiv"
+    },
+    {
+      "country": "Sudan",
+      "capital": "Khartoum"
+    },
+    {
+      "country": "Uganda",
+      "capital": "Kampala"
+    },
+    {
+      "country": "Iraq",
+      "capital": "Baghdad"
+    },
+    {
+      "country": "Poland",
+      "capital": "Warsaw"
+    },
+    {
+      "country": "Canada",
+      "capital": "Ottawa"
+    },
+    {
+      "country": "Morocco",
+      "capital": "Rabat"
+    },
+    {
+      "country": "Afghanistan",
+      "capital": "Kabul"
+    },
+    {
+      "country": "Saudi Arabia",
+      "capital": "Riyadh"
+    },
+    {
+      "country": "Peru",
+      "capital": "Lima"
+    },
+    {
+      "country": "Venezuela",
+      "capital": "Caracas"
+    },
+    {
+      "country": "Malaysia",
+      "capital": "Kuala Lumpur"
+    },
+    {
+      "country": "Uzbekistan",
+      "capital": "Tashkent"
+    },
+    {
+      "country": "Mozambique",
+      "capital": "Maputo"
+    },
+    {
+      "country": "Ghana",
+      "capital": "Accra"
+    },
+    {
+      "country": "Yemen",
+      "capital": "Sana'a"
+    },
+    {
+      "country": "Nepal",
+      "capital": "Kathmandu"
+    },
+    {
+      "country": "Angola",
+      "capital": "Luanda"
+    }
+  ]
+}
