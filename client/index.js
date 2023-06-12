@@ -2,27 +2,21 @@ const games = document.querySelector("#games");
 const hangmanCard = document.querySelector("hangman-card");
 const hangman = document.querySelector("#hangman");
 const letters = document.querySelectorAll("#letters");
-const displayLetter = document.getElementById("#display-letter");
-const countryLetters = country.split("");
-const capitalLetters = capital.split("");
+const displayLetter = document.getElementById("display-letter");
+let countryLetters = [];
+let capitalLetters = [];
+const alphabet='abcdefghijklmnopqrstuvwxyz'.split ('') 
+
+//event listeners
+
+// event listener for search bar needed
 
 hangmanCard.addEventListener("click", openHangman);
 letters.forEach((letter) => letter.addEventListener("click", checkLetter));
 
-function openHangman() {
-  games.classList.add("hidden");
-  hangman.classList.remove("hidden");
-}
-
-function geographyClick (){
-    //code for geography hangman
-}
-
-//function to update the word displayed
-
-async function fetchApiData(api) {
+async function fetchApiData() {
   try {
-    const respData = await fetch(`http://localhost:3000/geography/random`);
+    const respData = await fetch(`http://localhost:3002/geography/random`);
 
     if (respData.ok) {
       const data = await respData.json();
@@ -34,42 +28,62 @@ async function fetchApiData(api) {
     console.log(e);
   }
 }
-console.log(fetchApiData());
 
-// get country & city name and
+//start hangman
+function openHangman() {
+  games.classList.add("hidden");
+  hangman.classList.remove("hidden");
+
+  fetchApiData();
+}
+
+function displayCountry(){
+    let underscoreString = "";
+for (i=0;i<country.length;i++)
+underscoreString += "_ "
+
+}
+
+// get country & city name and turn them into each letter
 function addApi(data) {
   const country = data.country;
   const capital = data.capital;
-  country.forEach((letter) => {
-    div.innerHTML("<p></p>");
-  });
+  countryLetters = country.split("");
+  capitalLetters = capital.split("");
+  displayWord();
 }
+
 
 function checkLetter(country, capital) {
-  const clickedLetter = event.target;
-  for (let i = 0; i < countryLetters.length; i++) {}
+  const clickedLetter = event.target.textContent;
+  for (let i = 0; i < countryLetters.length; i++) {
+    if (countryLetters[i] === clickedLetter) {
+      countryLetters.splice(i, 1);
+      displayLetter.textContent += clickedLetter;
+      checkWin()
+    }
+  }
   for (let i = 0; i < capitalLetters.length; i++) {
     if (capitalLetters[i] === clickedLetter) {
-      displayLetter(capitalLetters[i]);
+        countryLetters.splice(i, 1);
+        displayLetter.textContent += capitalLetters[i];
+        checkWin()
     }
   }
 }
 
-function updateWordDisplay() {
-  // Get the word display element from the HTML
-  var wordDisplayElement = document.getElementById("word-display");
-
-  // Generate the word display with blanks and correctly guessed letters
-  var wordDisplay = "";
-  for (var i = 0; i < wordToGuess.length; i++) {
-    var letter = wordToGuess[i];
-    if (lettersGuessed.includes(letter)) {
-      wordDisplay += letter + " ";
-    } else {
-      wordDisplay += "_ ";
+function checkWin() {
+    if (countryLetters.length === 0 && capitalLetters.length === 0) {
+  alert("You won!");
     }
   }
+
+//when all the body parts disappears
+function checkLoss(){
+  //define bodyparts
+  //conditional statement when body parts are all gone 
+}
 
   // Update the HTML with the new word display
   wordDisplayElement.textContent = wordDisplay;
-}
+
