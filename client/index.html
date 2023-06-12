@@ -1,11 +1,128 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=å, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Brainville</title>
   </head>
-  <body></body>
+
+  <body>
+    <nav>
+      <img
+        id="brain"
+        src="images/Vector.jpg"
+        alt="animated brain"
+        style="width: 150px"
+      />
+
+      <div id="logo">Brainville</div>
+
+      <div class="searchbar">
+        <input class="search-input" type="text" placeholder="Search... " />
+        <img
+          id="mglass"
+          src="images/mglass.jpg"
+          alt="search symbol"
+          class="search-button"
+        />
+      </div>
+
+      <img
+        id="user"
+        src="images/User.jpg"
+        alt="user symbol"
+        style="width: 50px"
+      />
+      <img
+        id="hamburger"
+        src="images/Hamburger.jpg"
+        alt="options symbol"
+        style="width: 50px"
+      />
+    </nav>
+
+    <section id="games" class="grid hidden">
+      <div id="rcorners1" class="game">
+        <i class="fa-solid fa-earth-americas"></i>
+        <p>Hangman - Countries and Capitals</p>
+      </div>
+      <div id="rcorners2" class="game">
+        <i class="fa-solid fa-language"></i>
+        <p>Hangman - Italian Nouns</p>
+      </div>
+      <div id="rcorners3" class="game">
+        <i class="fa-solid fa-book"></i>
+        <p>Guess Who - English Kings</p>
+      </div>
+      <div id="rcorners4" class="game">
+        <i class="fa-solid fa-language"></i>
+        <p>Translating Race - Italian Nouns</p>
+      </div>
+    </section>
+
+    <section id="hangman-game" class="hangman">
+      <div class="top-section">
+        <img
+          id="hangman-image"
+          class="hangman-image"
+          src="images/Hangman1.jpg"
+          alt="hangman image level 1"
+        />
+        <div id="letter-grid" class="letter-grid">
+          <p id="A" class="letter">A</p>
+          <p id="B" class="letter">B</p>
+          <p id="C" class="letter">C</p>
+          <p id="D" class="letter">D</p>
+          <p id="E" class="letter">E</p>
+          <p id="F" class="letter">F</p>
+          <p id="G" class="letter">G</p>
+          <p id="H" class="letter">H</p>
+          <p id="I" class="letter">I</p>
+          <p id="J" class="letter">J</p>
+          <p id="K" class="letter">K</p>
+          <p id="L" class="letter">L</p>
+          <p id="M" class="letter">M</p>
+          <p id="N" class="letter">N</p>
+          <p id="O" class="letter">O</p>
+          <p id="P" class="letter">P</p>
+          <p id="Q" class="letter">Q</p>
+          <p id="R" class="letter">R</p>
+          <p id="S" class="letter">S</p>
+          <p id="T" class="letter">T</p>
+          <p id="U" class="letter">U</p>
+          <p id="V" class="letter">V</p>
+          <p id="W" class="letter">W</p>
+          <p id="X" class="letter">X</p>
+          <p id="Y" class="letter">Y</p>
+          <p id="Z" class="letter">Z</p>
+        </div>
+      </div>
+      <div id="underscore-container" class="word-container">
+        <div id="country-container">
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+        </div>
+        <div id="capital-container">
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+          <p class="placeholder">_</p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
