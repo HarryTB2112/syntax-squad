@@ -1,31 +1,57 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-    <title></title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Brainville</title>
+  </head>
 
-<body>
-    <!--<p id="ellipse"></p> -->
-    <img id="brain" src="Vector.jpg" alt="animated brain" style="width:150px">
+  <body>
+    <nav>
+      <img
+        id="brain"
+        src="images/Vector.jpg"
+        alt="animated brain"
+        style="width: 150px"
+      />
 
-    <p id="logo"></p>
-    
-    <p id="Search-bar"></p>
+      <div id="logo">Brainville</div>
 
-    <img id="mglass" src="mglass.jpg" alt="search symbol" style="width:50px">
-    <img id="user" src="User.jpg" alt="user symbol" style="width:50px">
-    <img id="hamburger" src="Hamburger.jpg" alt="options symbol" style="width:50px">
+      <div class="searchbar">
+        <input class="search-input" type="text" placeholder="Search... " />
+        <img
+          id="mglass"
+          src="images/mglass.jpg"
+          alt="search symbol"
+          class="search-button"
+        />
+      </div>
 
-    <p id="rcorners1"></p>
-    <p id="rcorners2"></p>
-    <p id="rcorners3"></p>
-    <p id="rcorners4"></p>
-   
-</body>
+      <img
+        id="user"
+        src="images/User.jpg"
+        alt="user symbol"
+        style="width: 50px"
+      />
+      <img
+        id="hamburger"
+        src="images/Hamburger.jpg"
+        alt="options symbol"
+        style="width: 50px"
+      />
+    </nav>
 
+    <section id="games" class="grid">
+      <div id="rcorners1" class="game"></div>
+      <div id="rcorners2" class="game"></div>
+      <div id="rcorners3" class="game"></div>
+      <div id="rcorners4" class="game"></div>
+    </section>
+  </body>
 </html>
