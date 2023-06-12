@@ -1,1 +1,119 @@
 /* Styles for html */
+
+body{
+    background: #F8F3D4;
+  
+}
+/*
+#ellipse{
+    position: absolute;
+    width: 240px;
+    height: 226px;
+    left: -50px;
+    top: -50px;
+    background: #00B8A9;
+    border-radius: 70%;
+}*/
+
+#logo{
+  position: absolute;
+  width: 227px;
+  height: 71px;
+  left: 250px;
+  top: 29px;
+  background: #00B8A9;
+  border-radius: 15px;
+}
+
+/*note to self: need to fix the brain image to retain it's colour */
+#brain{
+  position: absolute;
+  left: 1.04%;
+  right: 93.19%;
+  top: 2.05%;
+  bottom: 90.33%;
+  background: #FFDE7D;
+  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+}
+
+#search-bar{
+position: absolute;
+width: 373px;
+height: 40px;
+left: 828px;
+top: 20px;
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+#mglass{
+  position: absolute;
+  left: 1250px;
+  right: 93.19%;
+  top: 30px;
+  bottom: 90.33%;
+  background: #FFDE7D;
+  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+}
+
+#user{
+  position: absolute;
+  left: 1325px;
+  right: 93.19%;
+  top: 30px;
+  bottom: 90.33%;
+  background: #FFDE7D;
+  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+}
+
+#hamburger{
+  position: absolute;
+  left: 1400px;
+  right: 93.19%;
+  top: 31px;
+  bottom: 90.33%;
+  background: #FFDE7D;
+  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+}
+
+
+#rcorners1 {
+    position: absolute;
+    width: 354px;
+    height: 266px;
+    left: 282px;
+    top: 272px;
+    background: #F6416C;
+    border-radius: 45px; /* used to make backgorund curved */
+  }
+
+#rcorners2 {
+    position: absolute;
+    width: 354px;
+    height: 266px;
+    left: 803px;
+    top: 272px;
+    background: #F6416C;
+    border-radius: 45px;
+  }
+  
+#rcorners3 {
+    position: absolute;
+    width: 354px;
+    height: 266px;
+    left: 281px;
+    top: 589px;
+    background: #F6416C;
+    border-radius: 45px;
+  }
+  
+#rcorners4 {
+    position: absolute;
+    width: 354px;
+    height: 264.01px;
+    left: 805px;
+    top: 589px;
+    background: #F6416C;
+    border-radius: 45px; 
+  }
+  
