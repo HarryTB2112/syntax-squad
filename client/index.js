@@ -38,11 +38,13 @@ function openHangman() {
 }
 
 function displayCountry(){
-    let underscoreString = "";
-for (i=0;i<country.length;i++)
-underscoreString += "_ "
-
-}
+    const underscoreContainer = document.getElementById("underscoreContainer");
+    underscoreContainer = "";
+        for (let i = 0; i < country.length; i++) {
+        const underscore = document.createElement("p");
+        underscore.textContent = "_";
+        underscoreContainer.appendChild(underscore);
+      }}
 
 // get country & city name and turn them into each letter
 function addApi(data) {
@@ -78,10 +80,19 @@ function checkWin() {
     }
   }
 
-//when all the body parts disappears
+/// this function needs to be fixed
 function checkLoss(){
-  //define bodyparts
-  //conditional statement when body parts are all gone 
+  //define bodyparts (they are urls)
+  //conditional statement when body parts are all gone, give an alert to try again
+  const img=""
+  arrayImages=["Hangman1.jpg","Hangman2.jpg", "Hangman3.jpg", "Hangman4.jpg", 
+  "Hangman5.jpg", "Hangman6.jpg", "Hangman7.jpg"]
+  
+  for (let j=0; j<arrayImages.length; j++){
+    if (img===arrayImages[6]){
+      alert("Try Again!")
+    }
+  }
 }
 
   // Update the HTML with the new word display
