@@ -98,9 +98,9 @@ nav {
 .grid {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 500px);
-  grid-template-rows: repeat(2, 500px);
-  padding-top: 200px;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-rows: repeat(2, 100%);
+  padding-top: 5%;
   gap: 50px;
   width: 100%;
   margin: 0;
@@ -121,12 +121,12 @@ nav {
 }
 .game i {
   position: relative;
-  font-size: 170px;
+  font-size: 5rem;
   color: #ffde7d;
 }
 .game p {
   position: relative;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: black;
   text-align: center;
 }
@@ -138,7 +138,7 @@ nav {
   gap: 90px;
   height: 45%;
   width: 100%;
- padding-left: 2%;
+  padding-left: 2%;
 }
 
 .hangman-image {
@@ -146,9 +146,8 @@ nav {
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   display: flex;
   height: 130%;
-  width:40%;
-  top: 15%
-
+  width: 40%;
+  top: 15%;
 }
 .letter-grid {
   display: grid;
@@ -157,7 +156,7 @@ nav {
   gap: 5px;
   margin-right: 5%;
   width: 50%;
-  height:100%
+  height: 100%;
 }
 
 .letter {
@@ -182,7 +181,7 @@ nav {
   grid-template-columns: repeat(2, 50px);
   grid-template-rows: repeat(1, 50px);
   top: 80%;
-  left:10% ;
+  left: 10%;
   justify-content: center;
   align-items: center;
   gap: 35rem;
@@ -191,16 +190,5 @@ nav {
 #capital-container {
   display: flex;
   font-size: 3rem;
-  margin-top: 300%
+  margin-top: 300%;
 }
-
-
-
-
-
-
-
-
-
-
-
