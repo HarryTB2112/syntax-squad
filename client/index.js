@@ -1,7 +1,6 @@
 const games = document.querySelector("#games");
 const hangman = document.querySelector("#hangman-game");
 const letters = document.querySelector("#letter-grid");
-const displayLetter = document.getElementById("display-letter");
 let countryLetters = [];
 let capitalLetters = [];
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -11,6 +10,7 @@ const brain = document.querySelector("#brain")
 const clickedLetters = []
 const countryContainer = document.querySelector("#country-container")
 const capitalContainer = document.querySelector("#capital-container")
+let underscore;
 
 //event listeners
 
@@ -19,7 +19,7 @@ const capitalContainer = document.querySelector("#capital-container")
 hangmanCard.addEventListener("click", openHangman);
 brain.addEventListener("click", closeHangman)
 
-// letters.forEach((letter) => letter.addEventListener("click", checkLetter));
+
 letters.addEventListener("click", checkLetter);
 
 //event listener for back-end and front-end
@@ -74,7 +74,6 @@ async function fetchApiData() {
 function openHangman() {
   games.classList.add("hidden");
   hangman.classList.remove("hidden");
-  // addApi()
 
   fetchApiData();
 }
@@ -85,23 +84,37 @@ function closeHangman(){
   hangman.classList.add("hidden");
 }
 
-function displayCountry(countryArr) {
-  countryContainer.innerHTML = "";
+function displayCountry() {
+  countryContainer.innerHTML = "<p>Country: </p>";
+  
   for (let i = 0; i < countryLetters.length; i++) {
-    const underscore = document.createElement("p");
-    underscore.textContent = "_";
+    underscore = document.createElement("p");
+    underscore.setAttribute("id", `${i}`)
+    if (countryLetters[i] === " ") {
+      underscore.innerHTML = "&nbsp;&nbsp;"
+    }else {
+      underscore.textContent = "_";
+    }
+  
+    
     countryContainer.appendChild(underscore);
   }
 }
 
-function displayCapital(capitalArr) {
-  capitalContainer.innerHTML = "";
+function displayCapital() {
+  capitalContainer.innerHTML = "<p>Capital: <p>";
   for (let i = 0; i < capitalLetters.length; i++) {
-    const underscore = document.createElement("p");
-    underscore.textContent = "_";
+    underscore = document.createElement("p");
+    underscore.setAttribute("id", `${i + 20}`)
+    if (capitalLetters[i] === " ") {
+      underscore.innerHTML = "&nbsp;&nbsp;";
+    } else {
+      underscore.textContent = "_";
+    }
     capitalContainer.appendChild(underscore);
   }
 }
+
 
 // get country & city name and turn them into each letter
 function addApi(data) {
@@ -109,52 +122,74 @@ function addApi(data) {
   const capital = data.capital;
   countryLetters = country.toUpperCase().split("");
   capitalLetters = capital.toUpperCase().split("");
-  displayCapital(capitalLetters);
-  displayCountry(countryLetters)
+  displayCapital();
+  displayCountry()
+  console.log(country)
+  console.log(capital)
+  console.log(countryLetters)
+  console.log(capitalLetters)
 }
 
 function checkLetter(country, capital) {
   const clickedLetter = event.target
+  console.log(clickedLetter)
+  
   
 
-  let letterFound = false;
+  let letterFound =false;
   for (let i = 0; i < countryLetters.length; i++) {
-    if (countryLetters[i] === clickedLetter) {
+    if (clickedLetter.id === "letter-grid") {
+      break
+    }
+    if (countryLetters[i] === clickedLetter.textContent) {
       clickedLetter.style.color = "green"
-      displayLetter.textContent += clickedLetter;
-      letterFound = true;
-      clickedLetters.push(clickedLetter)
-    break;
+      // const underscore = document.createElement("p");
+      // underscore.innerHTML += clickedLetter;
+      document.getElementById(i.toString()).textContent = clickedLetter.textContent;
+        letterFound = true;
+        clickedLetters.push(clickedLetter.textContent)
+      
+    // break;
 
     }
   }
   for (let i = 0; i < capitalLetters.length; i++) {
-    if (capitalLetters[i] === clickedLetter) {
-      displayLetter.textContent += capitalLetters[i];
-     letterFound=true
-     clickedLetters.push(clickedLetter)
-    break;
+    if (capitalLetters[i] === clickedLetter.textContent) {
+      clickedLetter.style.color = "green"
+      // const underscore = document.createElement("p");
+      // underscore.innerHTML += clickedLetter;
+      document.getElementById((i + 20).toString()).textContent = clickedLetter.textContent;
+        letterFound = true;
+        clickedLetters.push(clickedLetter.textContent)
+    // break;
     }
     
   }
-  if (!countryLetters.includes(clickedLetter) && !capitalLetters.includes(clickedLetter)) {
+  if (!countryLetters.includes(clickedLetter.textContent) && !capitalLetters.includes(clickedLetter.textContent) && !(clickedLetter.id === "letter-grid")) {
     clickedLetter.style.color = "red"
     clickedLetter.style.textDecoration="line-through"
   }
-  checkWin();
-  if (!letterFound){
-    checkLoss()
+  console.log(clickedLetters)
+  setTimeout(checkWin, 500)
+  if (checkWin === true){
+    console.log(checkWin)
+    openHangman()}
+  // if (!letterFound){
+  //   checkLoss()
 }
+
+
+
+function checkWin() {
+  if ((countryLetters.length + capitalLetters.length) === clickedLetters.length) {
+    alert("You won!");
+    return true
+  }
 }
-
-
-
-// function checkWin() {
-//   if (countryLetters.length === clickedLetters.length && capitalLetters.length === clickedLetters.length) {
-//     alert("You won!");
-//   }
-// }
-
+console.log(checkWin)
+if (checkWin === true){
+  openHangman()
+}
 
 /// this function needs to be fixed
 // function checkLoss() {
@@ -162,13 +197,13 @@ function checkLetter(country, capital) {
 //   //conditional statement when body parts are all gone, give an alert to try again
 //   const img = "";
 //   const arrayImages = [
-//     "Hangman1.jpg",
-//     "Hangman2.jpg",
-//     "Hangman3.jpg",
-//     "Hangman4.jpg",
-//     "Hangman5.jpg",
-//     "Hangman6.jpg",
-//     "Hangman7.jpg",
+//     "images/Hangman1.jpg",
+//     "images/Hangman2.jpg",
+//     "images/Hangman3.jpg",
+//     "images/Hangman4.jpg",
+//     "images/Hangman5.jpg",
+//     "images/Hangman6.jpg",
+//     "images/Hangman7.jpg",
 //   ];
 
 //   for (let j = 0; j < arrayImages.length; j++) {
@@ -176,4 +211,4 @@ function checkLetter(country, capital) {
 //       alert("Try Again!");
 //     }
 //   }
-// }
+// 
