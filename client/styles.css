@@ -190,14 +190,13 @@ nav {
 .word-container {
   display: grid;
   position: absolute;
-  grid-template-columns: repeat(2, 50px);
-  grid-template-rows: repeat(1, 50px);
+  grid-template-columns: repeat(1, 50px);
+  grid-template-rows: repeat(2, 50px);
   top: 60%;
-  left: 20%;
+  left: 30%;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  gap: 400px;
+  gap: 60px;
 }
 
 #country-container,
