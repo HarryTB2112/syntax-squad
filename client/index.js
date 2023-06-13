@@ -111,6 +111,8 @@ function addApi(data) {
   capitalLetters = capital.toUpperCase().split("");
   displayCapital(capitalLetters);
   displayCountry(countryLetters)
+  console.log(country)
+  console.log(capital)
 }
 
 function checkLetter(country, capital) {
