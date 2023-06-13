@@ -1,18 +1,59 @@
 const games = document.querySelector("#games");
-const hangmanCard = document.querySelector("hangman-card");
-const hangman = document.querySelector("#hangman");
-const letters = document.querySelectorAll("#letters");
+const hangman = document.querySelector("#hangman-game");
+const letters = document.querySelector("#letter-grid");
 const displayLetter = document.getElementById("display-letter");
 let countryLetters = [];
 let capitalLetters = [];
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+const hangmanCard = document.querySelector("#rcorners1")
+//const createForm = document.querySelector("#rcorners1");
+const brain = document.querySelector("#brain")
+const clickedLetters = []
+const countryContainer = document.querySelector("#country-container")
+const capitalContainer = document.querySelector("#capital-container")
 
 //event listeners
 
 // event listener for search bar needed
 
 hangmanCard.addEventListener("click", openHangman);
-letters.forEach((letter) => letter.addEventListener("click", checkLetter));
+brain.addEventListener("click", closeHangman)
+
+// letters.forEach((letter) => letter.addEventListener("click", checkLetter));
+letters.addEventListener("click", checkLetter);
+
+//event listener for back-end and front-end
+createForm.addEventListener("submit", createNewWord);
+//POST req - connecting front-end and back-end 
+async function createNewWord(e) {
+    e.preventDefault();
+    
+    const data = { name: e.target.rcorners1.value };
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }
+    const response = await fetch("http://localhost:3002/geography", options)
+    
+    let message = document.querySelector("#message");
+    if (response.status === 201) {
+        // Clear input
+        e.target._.value = ""
+        // Display a successful message to the user
+        message.textContent = "."
+        setTimeout(() => {
+            message.textContent = ""
+        }, 4000)
+    } else {
+        // Do sth else
+        e.target.rcorners1.value = ""
+        }
+  }
+
+
 
 async function fetchApiData() {
   try {
@@ -33,27 +74,32 @@ async function fetchApiData() {
 function openHangman() {
   games.classList.add("hidden");
   hangman.classList.remove("hidden");
+  // addApi()
 
   fetchApiData();
 }
 
-function displayCountry() {
-  const underscoreContainer = document.getElementById("underscore-container");
-  underscoreContainer.innerHTML = "";
+//go back to main page
+function closeHangman(){
+  games.classList.remove("hidden") 
+  hangman.classList.add("hidden");
+}
+
+function displayCountry(countryArr) {
+  countryContainer.innerHTML = "";
   for (let i = 0; i < countryLetters.length; i++) {
     const underscore = document.createElement("p");
     underscore.textContent = "_";
-    underscoreContainer.appendChild(underscore);
+    countryContainer.appendChild(underscore);
   }
 }
 
-function displayCapital() {
-  const underscoreContainer = document.getElementById("underscore-container");
-  underscoreContainer.innerHTML = "";
+function displayCapital(capitalArr) {
+  capitalContainer.innerHTML = "";
   for (let i = 0; i < capitalLetters.length; i++) {
     const underscore = document.createElement("p");
     underscore.textContent = "_";
-    underscoreContainer.appendChild(underscore);
+    capitalContainer.appendChild(underscore);
   }
 }
 
@@ -63,33 +109,39 @@ function addApi(data) {
   const capital = data.capital;
   countryLetters = country.toUpperCase().split("");
   capitalLetters = capital.toUpperCase().split("");
-  displayCapital();
-  displayCountry()
+  displayCapital(capitalLetters);
+  displayCountry(countryLetters)
 }
 
 function checkLetter(country, capital) {
-  const clickedLetter = event.target.textContent.toUpperCase();
+  const clickedLetter = event.target
+  
+
   let letterFound = false;
   for (let i = 0; i < countryLetters.length; i++) {
     if (countryLetters[i] === clickedLetter) {
-      countryLetters.splice(i, 1);
+      clickedLetter.style.color = "green"
       displayLetter.textContent += clickedLetter;
       letterFound = true;
-      checkWin();
+      clickedLetters.push(clickedLetter)
     break;
 
     }
   }
   for (let i = 0; i < capitalLetters.length; i++) {
     if (capitalLetters[i] === clickedLetter) {
-      countryLetters.splice(i, 1);
       displayLetter.textContent += capitalLetters[i];
      letterFound=true
-     checkWin();
+     clickedLetters.push(clickedLetter)
     break;
     }
     
   }
+  if (!countryLetters.includes(clickedLetter) && !capitalLetters.includes(clickedLetter)) {
+    clickedLetter.style.color = "red"
+    clickedLetter.style.textDecoration="line-through"
+  }
+  checkWin();
   if (!letterFound){
     checkLoss()
 }
@@ -97,30 +149,31 @@ function checkLetter(country, capital) {
 
 
 
-function checkWin() {
-  if (countryLetters.length === 0 && capitalLetters.length === 0) {
-    alert("You won!");
-  }
-}
+// function checkWin() {
+//   if (countryLetters.length === clickedLetters.length && capitalLetters.length === clickedLetters.length) {
+//     alert("You won!");
+//   }
+// }
+
 
 /// this function needs to be fixed
-function checkLoss() {
-  //define bodyparts (they are urls)
-  //conditional statement when body parts are all gone, give an alert to try again
-  const img = "";
-  const arrayImages = [
-    "Hangman1.jpg",
-    "Hangman2.jpg",
-    "Hangman3.jpg",
-    "Hangman4.jpg",
-    "Hangman5.jpg",
-    "Hangman6.jpg",
-    "Hangman7.jpg",
-  ];
+// function checkLoss() {
+//   //define bodyparts (they are urls)
+//   //conditional statement when body parts are all gone, give an alert to try again
+//   const img = "";
+//   const arrayImages = [
+//     "Hangman1.jpg",
+//     "Hangman2.jpg",
+//     "Hangman3.jpg",
+//     "Hangman4.jpg",
+//     "Hangman5.jpg",
+//     "Hangman6.jpg",
+//     "Hangman7.jpg",
+//   ];
 
-  for (let j = 0; j < arrayImages.length; j++) {
-    if (img === arrayImages[6]) {
-      alert("Try Again!");
-    }
-  }
-}
+//   for (let j = 0; j < arrayImages.length; j++) {
+//     if (img === arrayImages[6]) {
+//       alert("Try Again!");
+//     }
+//   }
+// }

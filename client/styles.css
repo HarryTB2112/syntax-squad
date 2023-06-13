@@ -39,6 +39,7 @@ nav {
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   height: 6rem;
   width: 2rem;
+  cursor: pointer;
 }
 .searchbar {
   width: 456px;
