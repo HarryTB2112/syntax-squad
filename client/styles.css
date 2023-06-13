@@ -1,27 +1,24 @@
 /* Styles for html */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   font-family: "Rubik", sans-serif;
   height: 100%;
   background-color: #f8f3d4;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  height: 150px;
+  height: 25%;
+  /*right:10%*/
 }
-
 #logo {
   display: flex;
   position: relative;
@@ -34,21 +31,20 @@ nav {
   font-size: 60px;
   color: #ffde7d;
 }
-
 /*note to self: need to fix the brain image to retain it's colour */
 #brain {
   position: relative;
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+  height: 6rem;
+  width: 2rem;
 }
-
 .searchbar {
   width: 456px;
   height: 50px;
   position: relative;
   display: flex;
 }
-
 .search-input {
   position: relative;
   width: 500px;
@@ -61,7 +57,6 @@ nav {
   font-family: "Rubik", sans-serif;
   font-size: 24px;
 }
-
 .search-button {
   position: relative;
   width: 50px;
@@ -76,33 +71,29 @@ nav {
   font-size: 43px;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
 }
-
 .search-button:hover {
   transform: translateY(-10%);
 }
-
 #user {
   position: relative;
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
+  right: -3%
 }
-
 #user:hover {
   transform: translateY(-10%);
 }
-
 #hamburger:hover {
   transform: translateY(-10%);
 }
-
 #hamburger {
   position: relative;
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
+  right: -7%;
 }
-
 .grid {
   display: grid;
   justify-content: center;
@@ -113,7 +104,6 @@ nav {
   width: 100%;
   margin: 0;
 }
-
 .game {
   position: relative;
   display: flex;
@@ -125,54 +115,48 @@ nav {
   gap: 50px;
   cursor: pointer;
 }
-
 .game:hover {
   transform: scale(105%);
 }
-
 .game i {
   position: relative;
   font-size: 170px;
   color: #ffde7d;
 }
-
 .game p {
   position: relative;
   font-size: 40px;
   color: black;
   text-align: center;
 }
-
 .top-section {
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 90px;
-  height: 300px;
+  height: 45%;
   width: 100%;
-  margin-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 5%;
-  
+  margin: 5%;
 }
 
 .hangman-image {
+  position: relative;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   display: flex;
-  height: 380px;
-  width: 450px;
-  margin-top: 5%;
-}
+  height: 130%;
+  width:40%;
+  top: 15%
 
+}
 .letter-grid {
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(5, 20%);
   gap: 5px;
-  margin: 20px;
+  margin-right: 5%;
   width: 50%;
+  height:100%
 }
 
 .letter {
@@ -185,30 +169,37 @@ nav {
   background-color: #00b8a9;
   cursor: pointer;
 }
-
 .letter:hover {
   scale: 105%;
 }
-
 .hidden {
   display: none;
 }
-
 .word-container {
   display: grid;
   position: absolute;
   grid-template-columns: repeat(2, 50px);
   grid-template-rows: repeat(1, 50px);
   top: 80%;
-  left:100px ;
-  /* left: 30%; */
+  left:10% ;
   justify-content: center;
   align-items: center;
-  gap: 600px;
+  gap: 35rem;
 }
-
 #country-container,
 #capital-container {
   display: flex;
-  font-size: 60px;
+  font-size: 3rem;
+  margin-top: 550%
 }
+
+
+
+
+
+
+
+
+
+
+
