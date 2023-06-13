@@ -148,9 +148,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  height: 40%;
+  gap: 90px;
+  height: 300px;
   width: 100%;
+  margin-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
@@ -160,8 +161,8 @@ nav {
 .hangman-image {
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   display: flex;
-  height: 140%;
-  width: 50%;
+  height: 380px;
+  width: 450px;
   margin-top: 5%;
 }
 
@@ -196,17 +197,18 @@ nav {
 .word-container {
   display: grid;
   position: absolute;
-  grid-template-columns: repeat(1, 50px);
-  grid-template-rows: repeat(2, 50px);
-  top: 70%;
-  left: 30%;
+  grid-template-columns: repeat(2, 50px);
+  grid-template-rows: repeat(1, 50px);
+  top: 80%;
+  left:100px ;
+  /* left: 30%; */
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 600px;
 }
 
 #country-container,
 #capital-container {
   display: flex;
-  font-size: 70px;
+  font-size: 60px;
 }
