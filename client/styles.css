@@ -9,6 +9,7 @@ html,
 body {
   font-family: "Rubik", sans-serif;
   height: 100%;
+  width: 100%;
   background-color: #f8f3d4;
 }
 nav {
@@ -16,8 +17,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  height: 25%;
-  /*right:10%*/
+  height: 20%;
+  /* right:10% */
 }
 #logo {
   display: flex;
@@ -79,7 +80,7 @@ nav {
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
-  right: -3%
+  /* right: -3% */
 }
 #user:hover {
   transform: translateY(-10%);
@@ -92,7 +93,7 @@ nav {
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
-  right: -7%;
+  /* right: -5%; */
 }
 .grid {
   display: grid;
@@ -130,14 +131,14 @@ nav {
   text-align: center;
 }
 .top-section {
-  margin: 20px;
+  /* margin: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 90px;
   height: 45%;
   width: 100%;
-  margin: 5%;
+ padding-left: 2%;
 }
 
 .hangman-image {
@@ -190,7 +191,7 @@ nav {
 #capital-container {
   display: flex;
   font-size: 3rem;
-  margin-top: 550%
+  margin-top: 300%
 }
 
 
