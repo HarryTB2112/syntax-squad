@@ -149,14 +149,20 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  height: 50%;
+  height: 40%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  
 }
 
 .hangman-image {
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   display: flex;
-  height: 100%;
+  height: 140%;
   width: 50%;
+  margin-top: 5%;
 }
 
 .letter-grid {
@@ -193,7 +199,7 @@ nav {
   grid-template-columns: repeat(1, 50px);
   grid-template-rows: repeat(2, 50px);
   top: 70%;
-  left: 40%;
+  left: 30%;
   justify-content: center;
   align-items: center;
   gap: 60px;
