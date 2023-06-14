@@ -23,7 +23,10 @@ Code snippets
 Bugs
 Future features -->
 
-Project Title:
+Project Title: BrainVille
+
+Project Description:
+A website with 4 games;
 
 In terminal:
 
