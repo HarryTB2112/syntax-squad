@@ -32,8 +32,15 @@ app.get(`/italian/random`, (req, res) => {
 app.get(`/geography/random`, (req, res) =>{
     const randomNumber = Math.floor(Math.random() * geography.length)
     res.status(200).send(geography[randomNumber]);
-
 })
+
+//connecting back-end to front-end
+app.post("/geography", (req, res) =>{
+   const newCountry = req.body;
+   geography.push(newCountry);
+    res.status(201).send(newCountry);
+})
+
 
 
 

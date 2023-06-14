@@ -1,0 +1,8 @@
+# contains node_modules
+# guide: https://www.pluralsight.com/guides/how-to-use-gitignore-file
+
+node_modules
+logs/
+# logger js path
+# package.json
+# package-lock.json

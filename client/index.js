@@ -1,34 +1,52 @@
 const games = document.querySelector("#games");
 const hangman = document.querySelector("#hangman-game");
 const letters = document.querySelector("#letter-grid");
-let countryLetters = [];
-let capitalLetters = [];
-const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 const hangmanCard = document.querySelector("#rcorners1")
-//const createForm = document.querySelector("#rcorners1");
 const brain = document.querySelector("#brain")
-const clickedLetters = []
 const countryContainer = document.querySelector("#country-container")
 const capitalContainer = document.querySelector("#capital-container")
+const hangmanImage = document.querySelector("#hangman-image")
+const resetButton = document.querySelector("#reset-btn");
+const addMoreButton = document.querySelector("#modal-btn");
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+let countryLetters = [];
+let capitalLetters = [];
+let clickedLetters = []
 let underscore;
+  const arrayImages = [
+    "images/Hangman1.jpg",
+    "images/Hangman2.jpg",
+    "images/Hangman3.jpg",
+    "images/Hangman4.jpg",
+    "images/Hangman5.jpg",
+    "images/Hangman6.jpg",
+    "images/Hangman7.jpg",
+  ];
 
-//event listeners
+let currentImg = arrayImages[0]
+
 
 // event listener for search bar needed
 
 hangmanCard.addEventListener("click", openHangman);
-brain.addEventListener("click", closeHangman)
-
-
+// addMoreButton.addEventListener("click", addMore );
+resetButton.addEventListener("click", openHangman);
+brain.addEventListener("click", closeHangman);
 letters.addEventListener("click", checkLetter);
 
+
 //event listener for back-end and front-end
-createForm.addEventListener("submit", createNewWord);
+// createForm.addEventListener("submit", createNewWord);
+
+
 //POST req - connecting front-end and back-end 
 async function createNewWord(e) {
     e.preventDefault();
     
-    const data = { name: e.target.rcorners1.value };
+    const data = { 
+      country: e.target.countryInput.value,
+      capital: e.target.capitalInput.value, 
+  };
     const options = {
         method: "POST",
         headers: {
@@ -38,18 +56,16 @@ async function createNewWord(e) {
     }
     const response = await fetch("http://localhost:3002/geography", options)
     
-    let message = document.querySelector("#message");
     if (response.status === 201) {
         // Clear input
-        e.target._.value = ""
+        e.target.countryInput.value = ""
+        e.target.capitalInput.value = ""
         // Display a successful message to the user
-        message.textContent = "."
-        setTimeout(() => {
-            message.textContent = ""
-        }, 4000)
+        alert("Country and Capital Added.")
     } else {
-        // Do sth else
-        e.target.rcorners1.value = ""
+        e.target.countryInput.value = ""
+        e.target.capitalInput.value = ""
+        alert("This country already exists, please try a new one.")
         }
   }
 
@@ -74,9 +90,18 @@ async function fetchApiData() {
 function openHangman() {
   games.classList.add("hidden");
   hangman.classList.remove("hidden");
-
+  const lettersArr = letters.children
+  for (let i = 0; i < lettersArr.length; i++) {
+    lettersArr[i].style.color = "#ffde7d";
+    lettersArr[i].style.textDecoration = ""
+  }
+  hangmanImage.src = "images/Hangman1.jpg"
+  currentImg = arrayImages[0]
+  console.log(lettersArr)
   fetchApiData();
+  clickedLetters = []
 }
+
 
 //go back to main page
 function closeHangman(){
@@ -130,85 +155,59 @@ function addApi(data) {
   console.log(capitalLetters)
 }
 
-function checkLetter(country, capital) {
-  const clickedLetter = event.target
-  console.log(clickedLetter)
-  
-  
-
-  let letterFound =false;
-  for (let i = 0; i < countryLetters.length; i++) {
-    if (clickedLetter.id === "letter-grid") {
-      break
-    }
-    if (countryLetters[i] === clickedLetter.textContent) {
-      clickedLetter.style.color = "green"
-      // const underscore = document.createElement("p");
-      // underscore.innerHTML += clickedLetter;
-      document.getElementById(i.toString()).textContent = clickedLetter.textContent;
-        letterFound = true;
-        clickedLetters.push(clickedLetter.textContent)
+function checkLetter() {
+      const clickedLetter = event.target
+      console.log(clickedLetter.textContent)
+      if (!(clickedLetters.includes(clickedLetter.textContent))) {
+      for (let i = 0; i < countryLetters.length; i++) {
+        if (countryLetters[i] === clickedLetter.textContent) {
+          clickedLetter.style.color = "green"
+          document.getElementById(i.toString()).textContent = clickedLetter.textContent;
+            letterFound = true;
+            clickedLetters.push(clickedLetter.textContent)
+          }
+        }
       
-    // break;
-
-    }
-  }
-  for (let i = 0; i < capitalLetters.length; i++) {
-    if (capitalLetters[i] === clickedLetter.textContent) {
-      clickedLetter.style.color = "green"
-      // const underscore = document.createElement("p");
-      // underscore.innerHTML += clickedLetter;
-      document.getElementById((i + 20).toString()).textContent = clickedLetter.textContent;
-        letterFound = true;
-        clickedLetters.push(clickedLetter.textContent)
-    // break;
-    }
+      for (let i = 0; i < capitalLetters.length; i++) {
+        if (capitalLetters[i] === clickedLetter.textContent) {
+          clickedLetter.style.color = "green"
+          document.getElementById((i + 20).toString()).textContent = clickedLetter.textContent;
+            letterFound = true;
+            clickedLetters.push(clickedLetter.textContent)
+        }
+      }
     
-  }
-  if (!countryLetters.includes(clickedLetter.textContent) && !capitalLetters.includes(clickedLetter.textContent) && !(clickedLetter.id === "letter-grid")) {
+        
+      
+    
+        if (!countryLetters.includes(clickedLetter.textContent) && !capitalLetters.includes(clickedLetter.textContent) && !(clickedLetter.id === "letter-grid")) {
     clickedLetter.style.color = "red"
     clickedLetter.style.textDecoration="line-through"
+    if (!(currentImg === "images/Hangman7.jpg")){
+      currentImg = arrayImages[arrayImages.indexOf(currentImg) +1]
+    }
   }
+    if (currentImg === "images/Hangman7.jpg") {
+      setTimeout(lossAlert, 300)
+    }
+  }
+  hangmanImage.src = currentImg
+  
+  console.log(currentImg)
   console.log(clickedLetters)
-  setTimeout(checkWin, 500)
-  if (checkWin === true){
-    console.log(checkWin)
-    openHangman()}
-  // if (!letterFound){
-  //   checkLoss()
+  setTimeout(checkWin, 300)
 }
 
-
+    
+function lossAlert() {
+  alert("You lost!")
+  openHangman()
+}
 
 function checkWin() {
   if ((countryLetters.length + capitalLetters.length) === clickedLetters.length) {
     alert("You won!");
-    return true
+    openHangman()
   }
 }
-console.log(checkWin)
-if (checkWin === true){
-  openHangman()
-}
 
-/// this function needs to be fixed
-// function checkLoss() {
-//   //define bodyparts (they are urls)
-//   //conditional statement when body parts are all gone, give an alert to try again
-//   const img = "";
-//   const arrayImages = [
-//     "images/Hangman1.jpg",
-//     "images/Hangman2.jpg",
-//     "images/Hangman3.jpg",
-//     "images/Hangman4.jpg",
-//     "images/Hangman5.jpg",
-//     "images/Hangman6.jpg",
-//     "images/Hangman7.jpg",
-//   ];
-
-//   for (let j = 0; j < arrayImages.length; j++) {
-//     if (img === arrayImages[6]) {
-//       alert("Try Again!");
-//     }
-//   }
-// 

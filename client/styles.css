@@ -193,3 +193,51 @@ nav {
   font-size: 3rem;
   margin-top: 300%;
 }
+
+/* reset button */
+
+#reset-btn {
+  background-color: #00B8A9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 26.1%;
+  left: 57%;
+  width:19.5% ;
+  height:5.9% ;
+  font-size: 1.5rem;
+}
+#reset-btn:hover {
+  background-color: #F6416C;
+}
+#reset-btn:active {
+  background-color: #FFDE7D;
+}
+
+#modal-btn {
+  background-color: #00B8A9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 26.1%;
+  left: 77%;
+  width:19.5% ;
+  height:5.9% ;
+  font-size: 1.5rem;
+}
+#modal-btn:hover {
+  background-color: #F6416C;
+}
+#modal-btn:active {
+  background-color: #FFDE7D;
+}
