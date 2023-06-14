@@ -14,6 +14,8 @@ const createForm = document.querySelector("#add-form");
 const wins = document.querySelector("#win-count")
 const losses = document.querySelector("#loss-count")
 const winPercent = document.querySelector("#win-percent")
+const hamburger = document.querySelector("#hamburger")
+const dropdown = document.querySelector("#dropdown-menu")
 
 // Creating all needed variables
 let winCount = 0
@@ -43,6 +45,7 @@ createForm.addEventListener("submit", createNewWord);
 resetButton.addEventListener("click", openHangman);
 brain.addEventListener("click", closeHangman);
 letters.addEventListener("click", checkLetter);
+hamburger.addEventListener("click", dropdownMenu)
 
 function updateWins(){
   wins.textContent = `Win Count: ${winCount}`
@@ -55,6 +58,10 @@ function updateLosses(){
 function updateWinPercentage(){
   winPercent.textContent = `Win %: ${winCount / (winCount + lossCount) * 100}%`
 }
+
+function dropdownMenu () {
+  dropdown.classList.toggle("open")
+};
 
 
 //POST req to add countries and capitals - connecting front-end and back-end
