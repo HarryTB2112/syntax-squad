@@ -48,7 +48,7 @@
       />
     </nav>
 
-    <section id="games" class="grid ">
+    <section id="games" class="grid">
       <div id="rcorners1" class="game">
         <i class="fa-solid fa-earth-americas"></i>
         <p>Hangman - Countries and Capitals</p>
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section id="hangman-game" class="hangman hidden ">
+    <section id="hangman-game" class="hangman hidden">
       <div class="top-section">
         <img
           id="hangman-image"
@@ -75,7 +75,7 @@
           src="images/Hangman1.jpg"
           alt="hangman image"
         />
-        
+
         <div id="letter-grid" class="letter-grid">
           <p id="A" class="letter">A</p>
           <p id="B" class="letter">B</p>
@@ -115,8 +115,16 @@
           <p>Capital:</p>
         </div>
       </div>
-     
-      
+      <div class="modal hidden" id="modal">
+        <div class="modal-contents">
+          <p id="modal-text">Input new country and capital</p>
+          <form id="add-form">
+            <input id="country-input" type="text" placeholder="country" />
+            <input id="capital-input" type="text" placeholder="capital" />
+            <input type="submit" value="Create" />
+          </form>
+        </div>
+      </div>
     </section>
   </body>
 </html>
