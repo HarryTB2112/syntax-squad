@@ -11,8 +11,13 @@ const resetButton = document.querySelector("#reset-btn");
 const addMoreButton = document.querySelector("#modal-btn");
 const modal = document.querySelector("#modal");
 const createForm = document.querySelector("#add-form");
+const wins = document.querySelector("#win-count")
+const losses = document.querySelector("#loss-count")
+const winPercent = document.querySelector("#win-percent")
 
 // Creating all needed variables
+let winCount = 0
+let lossCount = 0
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 let countryLetters = [];
 let capitalLetters = [];
@@ -39,8 +44,18 @@ resetButton.addEventListener("click", openHangman);
 brain.addEventListener("click", closeHangman);
 letters.addEventListener("click", checkLetter);
 
-//event listener for back-end and front-end
-// createForm.addEventListener("submit", createNewWord);
+function updateWins(){
+  wins.textContent = `Win Count: ${winCount}`
+}
+
+function updateLosses(){
+  losses.textContent = `Loss Count: ${lossCount}`
+}
+
+function updateWinPercentage(){
+  winPercent.textContent = `Win %: ${winCount / (winCount + lossCount) * 100}%`
+}
+
 
 //POST req to add countries and capitals - connecting front-end and back-end
 async function createNewWord(e) {
@@ -215,6 +230,9 @@ function checkLetter() {
 function lossAlert() {
   const country = countryLetters.join("");
   const capital = capitalLetters.join("");
+  lossCount++;
+  updateLosses()
+  updateWinPercentage()
   alert(
     `You lost! \n \nThe Country was ${country} and the Capital was ${capital}`
   );
@@ -224,6 +242,9 @@ function lossAlert() {
 // Displays alert when game is won
 function checkWin() {
   if (countryLetters.length + capitalLetters.length === clickedLetters.length) {
+    winCount++;
+    updateWins()
+    updateWinPercentage()
     alert("You won!");
     openHangman();
   }
