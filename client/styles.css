@@ -9,8 +9,8 @@
 }
 html,
 body {
-   font-family: "Rubik", sans-serif;
-   /* font-family: 'Comforter'; */
+   /* font-family: "Rubik", sans-serif; */
+  font-family: 'Kalam', cursive;
   height: 100%;
   width: 100%;
   background-color: #f8f3d4;
