@@ -9,6 +9,8 @@ const capitalContainer = document.querySelector("#capital-container");
 const hangmanImage = document.querySelector("#hangman-image");
 const resetButton = document.querySelector("#reset-btn");
 const addMoreButton = document.querySelector("#modal-btn");
+const modal = document.querySelector("#modal");
+const createForm = document.querySelector("#add-form");
 
 // Creating all needed variables
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -31,7 +33,8 @@ let currentImg = arrayImages[0];
 
 // Creating event listeners for elements
 hangmanCard.addEventListener("click", openHangman);
-// addMoreButton.addEventListener("click", addMore );
+addMoreButton.addEventListener("click", addMore);
+createForm.addEventListener("submit", createNewWord);
 resetButton.addEventListener("click", openHangman);
 brain.addEventListener("click", closeHangman);
 letters.addEventListener("click", checkLetter);
@@ -67,6 +70,7 @@ async function createNewWord(e) {
     e.target.capitalInput.value = "";
     alert("This country already exists, please try a new one.");
   }
+  modal.classList.add("hidden");
 }
 
 // Fetches data from backend API
@@ -223,4 +227,8 @@ function checkWin() {
     alert("You won!");
     openHangman();
   }
+}
+
+function addMore() {
+  modal.classList.remove("hidden");
 }

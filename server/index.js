@@ -1,7 +1,6 @@
+const app = require("./app");
+const port = 3002;
 
-const app = require('./app');
-const port = 3002; 
-
-app.listen(port, ()=>{
-    console.log(`API listening on port ${port}`);
-})
+app.listen(port, () => {
+  console.log(`API listening on port ${port}`);
+});

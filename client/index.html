@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="./images/vector.ico" />
+    <link rel="shortcut icon" href="./images/icon.ico" />
     <script
       src="https://kit.fontawesome.com/e0f29e24ce.js"
       crossorigin="anonymous"
@@ -115,16 +115,26 @@
           <p>Capital:</p>
         </div>
       </div>
-      <div class="modal hidden" id="modal">
-        <div class="modal-contents">
-          <p id="modal-text">Input new country and capital</p>
-          <form id="add-form">
-            <input id="country-input" type="text" placeholder="country" />
-            <input id="capital-input" type="text" placeholder="capital" />
-            <input type="submit" value="Create" />
-          </form>
-        </div>
-      </div>
     </section>
+    <div class="modal hidden" id="modal">
+      <div class="modal-contents">
+        <p id="modal-text">Input new country and capital</p>
+        <form id="add-form">
+          <input
+            id="countryInput"
+            type="text"
+            placeholder="country"
+            class="input"
+          />
+          <input
+            id="capitalInput"
+            type="text"
+            placeholder="capital"
+            class="input"
+          />
+          <input id="input-btn" type="submit" value="Create" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
