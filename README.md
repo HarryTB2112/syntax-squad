@@ -40,7 +40,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 #### HOW TO OPEN THE BACKEND:
 
-- Go to your chosen browser, enter the url : [API](http://localhost:3002)
+- Go to your chosen browser, enter the URL: [API](http://localhost:3002).
 - You can check the roots:
   - /geography
   - /geography/random
@@ -106,7 +106,7 @@ Then, you should see the hangman page.
 - CSS
 - Javascript
 - API (.json files)
-- Figma [Frameworks](https://www.figma.com/file/ZWZXKNWeLBZqYAEDCQDGbX/Hangman?type=design&node-id=0%3A1&t=KlhuUEeRTDZebxyR-1)
+- [Figma Frameworks](https://www.figma.com/file/ZWZXKNWeLBZqYAEDCQDGbX/Hangman?type=design&node-id=0%3A1&t=KlhuUEeRTDZebxyR-1)
 - Express.js
 
 ## PROCESS:
