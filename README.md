@@ -69,7 +69,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### HOW TO ENTER THE GAME:
 
-Click 
+On the website, click 
 <br>
 <img src='/client/images/game1.PNG' width='225'>
 <br>
