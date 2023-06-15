@@ -17,7 +17,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 - Click on the github repo link above.
 - Fork the repo (top right of the page)
 - Go to your forked repo, it will now say `<your-github-username>syntax-squad`
-- Click the green "Code" button and copy the **SSH** option if you have already setup git in your terminal, or the **HTTPS** option if not.
+- Click the <span style="color: green;">"Code" button</span> and copy the **SSH** option if you have already setup git in your terminal, or the **HTTPS** option if not.
 
 #### IN TERMINAL: (GITBASH FOR WINDOW USERS OR TERMINAL FOR MAC USERS)
 
