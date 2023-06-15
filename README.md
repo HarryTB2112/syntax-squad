@@ -65,12 +65,12 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-![Homepage](\client\images\Homepage.png)
-![Hangman-page](\client\images\Hangman-page.png)
+![Homepage](/client/images/Homepage.png)
+![Hangman-page](/client/images/Hangman-page.png)
 
 ###### HOW TO ENTER THE GAME:
 
-Click ![Hangman: Countries and Capitals](\client\images\game1.PNG)
+Click ![Hangman: Countries and Capitals](/client/images/game1.PNG)
 Then, you should see the hangman page.
 
 ###### HOW TO PLAY THE GAME:
