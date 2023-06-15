@@ -13,7 +13,7 @@
 }
 html,
 body {
-  font-family: "Kalam", cursive;
+  font-family: "Rubik", sans-serif;
   height: 100%;
   width: 100%;
   background-color: #f8f3d4;
@@ -31,16 +31,16 @@ nav {
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 42%;
+  width: 20%;
   height: 100%;
   background: #00b8a9;
   border-radius: 15px;
-  font-size: 2.27rem;
+  font-size: 1rem;
   color: #ffde7d;
   font-family: 'Press Start 2P', cursive;
   padding-left: 2%;
   scale: 70%;
-  left: -4%;
+  left: -2%;
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@ nav {
   border-radius: 10px;
   border: 3px #00b8a9 solid;
   scale: 60%;
-  right: -18%;
+  right: -32%;
   
 } 
 .search-input {
@@ -75,7 +75,7 @@ nav {
   padding: 5px;
   color: black;
   font-family: "Rubik", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   border-radius: 10px;
   outline: none;
   
@@ -102,11 +102,15 @@ nav {
 }
 #user {
   position: relative;
-  background: #ffde7d;
-  mix-blend-mode: darken;
+  color: #00b8a9;
+  size: 5rem;
+  top: 0;
+  /* background: #ffde7d;
+  mix-blend-mode: darken; */
   cursor: pointer;
-  right: -7%;
-  scale: 70%;
+  right: -13.5%;
+  scale: 217%;
+  z-index: 10;
 }
 #user:hover {
   transform: translateY(-10%);
@@ -121,7 +125,7 @@ nav {
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
   scale: 70%;
-  /* right: -5%; */
+  right: 1%;
 }
 .grid {
   display: grid;
@@ -179,6 +183,7 @@ nav {
   height: 130%;
   width: 40%;
   top: 15%;
+  left: 1%;
 }
 .letter-grid {
   display: grid;
@@ -219,15 +224,15 @@ nav {
 #capital-container {
 
   display: flex;
-  font-size: 2rem;
-  margin-top: 300%;
+  font-size: 1.5rem;
+  margin-top: 200%;
   font-family: 'Press Start 2P', cursive;
 }
 
 /* reset button */
 
 #reset-btn {
-  font-family: "Kalam", cursive;
+  font-family: "Rubik", sans-serif;
   background-color: #00b8a9;
   color: white;
   border: none;
@@ -237,10 +242,10 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 25.1%;
+  bottom: 26.7%;
   left: 57%;
   width: 19.5%;
-  height: 6.9%;
+  height: 5.3%;
 }
 #reset-btn:hover {
   background-color: #f6416c;
@@ -250,7 +255,7 @@ nav {
 }
 
 #modal-btn {
-  font-family: "Kalam", cursive;
+  font-family: "Rubik", sans-serif;
   background-color: #00b8a9;
   color: white;
   border: none;
@@ -260,10 +265,10 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 25.1%;
+  bottom: 26.7%;
   left: 76.8%;
   width: 19.7%;
-  height: 6.9%;
+  height: 5.3%;
 }
 #modal-btn:hover {
   background-color: #f6416c;
@@ -368,10 +373,10 @@ nav {
 #scores {
   font-family: 'Press Start 2P', cursive;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.4rem;
   position: absolute;
-  top: 80%;
-  left: 2%;
+  top: 83%;
+  left: 3%;
 }
 
 li {
@@ -380,14 +385,15 @@ li {
 
 a {
   text-decoration: none;
-  color: #ffde7d;
+  color: white;
   font-size: 1rem;
 }
 
 a:hover {
   text-decoration: underline;
   transform: translateY(-3px);
-  color: #f6416c;
+  color: #ffde7d;
+  ;
 }
 
 .dropdown_menu {
@@ -404,7 +410,7 @@ a:hover {
 }
 
 .dropdown_menu.open {
-  height: 23.5%;
+  height: 21.5%;
   border: solid #f8f3d4 2px;
 }
 

@@ -11,17 +11,17 @@ const resetButton = document.querySelector("#reset-btn");
 const addMoreButton = document.querySelector("#modal-btn");
 const modal = document.querySelector("#modal");
 const createForm = document.querySelector("#add-form");
-const wins = document.querySelector("#win-count")
-const losses = document.querySelector("#loss-count")
-const winPercent = document.querySelector("#win-percent")
-const hamburger = document.querySelector("#hamburger")
-const dropdown = document.querySelector("#dropdown-menu")
-const modalClose = document.querySelector("#modal-close")
+const wins = document.querySelector("#win-count");
+const losses = document.querySelector("#loss-count");
+const winPercent = document.querySelector("#win-percent");
+const hamburger = document.querySelector("#hamburger");
+const dropdown = document.querySelector("#dropdown-menu");
+const modalClose = document.querySelector("#modal-close");
+const dropdownHome = document.querySelector("#dropdown-home");
 
 // Creating all needed variables
-let winCount = 0
-let lossCount = 0
-const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+let winCount = 0;
+let lossCount = 0;
 let countryLetters = [];
 let capitalLetters = [];
 let clickedLetters = [];
@@ -45,34 +45,36 @@ createForm.addEventListener("submit", createNewWord);
 resetButton.addEventListener("click", openHangman);
 logo.addEventListener("click", closeHangman);
 letters.addEventListener("click", checkLetter);
-hamburger.addEventListener("click", dropdownMenu)
-modalClose.addEventListener("click", closeModal)
+hamburger.addEventListener("click", dropdownMenu);
+modalClose.addEventListener("click", closeModal);
+dropdownHome.addEventListener("click", closeHangman);
 
 // Utility functions
-function updateWins(){
-  wins.textContent = `Win Count: ${winCount}`
+function updateWins() {
+  wins.textContent = `Win Count: ${winCount}`;
 }
 
-function updateLosses(){
-  losses.textContent = `Loss Count: ${lossCount}`
+function updateLosses() {
+  losses.textContent = `Loss Count: ${lossCount}`;
 }
 
-function updateWinPercentage(){
-  winPercent.textContent = `Win %: ${winCount / (winCount + lossCount) * 100}%`
+function updateWinPercentage() {
+  winPercent.textContent = `Win %: ${
+    Math.floor((winCount / (winCount + lossCount)) * 100)
+  }%`;
 }
 
-function dropdownMenu () {
-  dropdown.classList.toggle("open")
-};
+function dropdownMenu() {
+  dropdown.classList.toggle("open");
+}
 
-function closeModal () {
-  modal.classList.add("hidden")
+function closeModal() {
+  modal.classList.add("hidden");
 }
 
 function addMore() {
   modal.classList.remove("hidden");
 }
-
 
 //POST req to add countries and capitals - connecting front-end and back-end
 async function createNewWord(e) {
@@ -98,11 +100,10 @@ async function createNewWord(e) {
     e.target.capitalInput.value = "";
     // Display a successful message to the user
     alert("Country and Capital Added.");
-  } 
-  else if (response.status === 404) {
+  } else if (response.status === 404) {
     e.target.countryInput.value = "";
     e.target.capitalInput.value = "";
-    alert("Empty string input, try again.")
+    alert("Empty string input, try again.");
   } else {
     e.target.countryInput.value = "";
     e.target.capitalInput.value = "";
@@ -132,6 +133,9 @@ function openHangman() {
   games.classList.add("hidden");
   hangman.classList.remove("hidden");
 
+  clickedLetters = []
+  wrongLetters = []
+
   // Initialise letters grid
   const lettersArr = letters.children;
   for (let i = 0; i < lettersArr.length; i++) {
@@ -144,13 +148,14 @@ function openHangman() {
   currentImg = arrayImages[0];
   // Fetch Country and Capital
   fetchApiData();
-  clickedLetters = [];
+  dropdown.classList.remove("open")
 }
 
 // Go back to main page
 function closeHangman() {
   games.classList.remove("hidden");
   hangman.classList.add("hidden");
+  dropdown.classList.remove("open")
 }
 
 // Displays Underscores for the length of the country
@@ -193,7 +198,6 @@ function displayCapital() {
 
 // Get country & city name and turn them into each letter
 function addApi(data) {
-
   // Initalise country and capital variables
   const country = data.country;
   const capital = data.capital;
@@ -209,17 +213,14 @@ function addApi(data) {
 
 // Checks letter clicked to see if it is correct or incorrect, changes color, checks for duplicates, calls Win or Lose functions
 function checkLetter() {
-
   // Creatte clicked letter variable
   const clickedLetter = event.target;
 
   // Check if letter has already been clicked
   if (!clickedLetters.includes(clickedLetter.textContent)) {
-
     // Loop through country letters array and check for clicked letter
     for (let i = 0; i < countryLetters.length; i++) {
       if (countryLetters[i] === clickedLetter.textContent) {
-
         // Change styling if letter is correct
         clickedLetter.style.color = "green";
 
@@ -231,11 +232,10 @@ function checkLetter() {
         clickedLetters.push(clickedLetter.textContent);
       }
     }
-    
+
     // Loop through capital letters array and check for clicked letter
     for (let i = 0; i < capitalLetters.length; i++) {
       if (capitalLetters[i] === clickedLetter.textContent) {
-
         // Change styling if letter is correct
         clickedLetter.style.color = "green";
 
@@ -254,7 +254,6 @@ function checkLetter() {
       !capitalLetters.includes(clickedLetter.textContent) &&
       !(clickedLetter.id === "letter-grid")
     ) {
-
       // Change styling of letter
       clickedLetter.style.color = "red";
       clickedLetter.style.textDecoration = "line-through";
@@ -264,7 +263,6 @@ function checkLetter() {
         !(currentImg === "images/Hangman7.jpg") &&
         !wrongLetters.includes(clickedLetter.textContent)
       ) {
-
         // Iterate to the next image in array
         currentImg = arrayImages[arrayImages.indexOf(currentImg) + 1];
       }
@@ -272,6 +270,10 @@ function checkLetter() {
       // Push incorrect letter to wrong letters array
       wrongLetters.push(clickedLetter.textContent);
     }
+    console.log(clickedLetters)
+    console.log(clickedLetter)
+    console.log(currentImg)
+    console.log(wrongLetters)
 
     // Give loss alert if on final image
     if (currentImg === "images/Hangman7.jpg") {
@@ -293,8 +295,8 @@ function lossAlert() {
 
   // Iterate loss count and update score
   lossCount++;
-  updateLosses()
-  updateWinPercentage()
+  updateLosses();
+  updateWinPercentage();
 
   // Alert to the loss
   alert(
@@ -307,21 +309,16 @@ function lossAlert() {
 
 // Displays alert when game is won
 function checkWin() {
-
   // Check if game is completed
   if (countryLetters.length + capitalLetters.length === clickedLetters.length) {
-
     // Iterate win count and update scores
     winCount++;
-    updateWins()
-    updateWinPercentage()
+    updateWins();
+    updateWinPercentage();
 
     // Alert to the win
     alert("You won!");
-
     // Reset the game
     openHangman();
   }
 }
-
-
