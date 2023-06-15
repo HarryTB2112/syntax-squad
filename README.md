@@ -64,7 +64,10 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-![Homepage](/client/images/Homepage.png | width=50)
+![Homepage](src*="/client/images/Homepage.png"){
+   width:3rem;
+   height:3rem;
+}
 ![Hangman-page](/client/images/Hangman-page.png =50x50)
 
 ###### HOW TO ENTER THE GAME:
