@@ -81,7 +81,7 @@ Then, you should see the hangman page.
 - When you win, an alert pops up saying "You won!".
 - At the bottom left of the screen, there is a tally keeping track of your losses, wins and overall win percentage.
 - A "Reset" button can be used to restart the game whilst you're still playing.
-- The "Add More" button lets you add a country and capital that is not already part of the ![Geography Data](/server/geography.json).
+- The "Add More" button lets you add a country and capital that is not already part of the geography.JSON.
 - You can go back to the homepage by either refreshing the page or clicking on the "BrainVille" logo.
 
 #### IF YOU CREATE A CHANGE IN ANY OF THE FILES:
@@ -142,7 +142,7 @@ At the start of the project, git usage was tricky as there were often merge conf
 
 Countries and Capitals with spaces in the name were a problem, as they would display the space as an underscore to be guessed. Additionally they would count towards the amount of letters you need to get correct to win. We got over the first problem by checking if an element in the array was a space `" "` and displaying a `"&nbsp;` in the html. The second problem we got over by filtering out the spaces from the arrays in the checkWin function.
 
-## Bugs:
+## BUGS:
 
 There are no known bugs. However, some of the elements have not yet been implemented e.g. User Page.
 
