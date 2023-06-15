@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -28,41 +31,57 @@ nav {
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 42%;
   height: 100%;
   background: #00b8a9;
   border-radius: 15px;
-  font-size: 60px;
+  font-size: 2.27rem;
   color: #ffde7d;
-  font-family: "Rubik", sans-serif;
-}
-/*note to self: need to fix the brain image to retain it's colour */
-#brain {
-  position: relative;
-  background: #ffde7d;
-  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
-  height: 6rem;
-  width: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  padding-left: 2%;
+  scale: 70%;
+  left: -4%;
   cursor: pointer;
 }
+
+#brain  {
+  position: relative;
+  cursor: pointer;
+  scale: 60%;
+  z-index: 1;
+}
+#mglass {
+  top: 7;
+  scale: 70%;
+}
 .searchbar {
-  width: 456px;
-  height: 50px;
+  width: 25%;
+  height: 70%;
   position: relative;
   display: flex;
-}
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 3px #00b8a9 solid;
+  scale: 60%;
+  right: -18%;
+  
+} 
 .search-input {
   position: relative;
-  width: 500px;
+  width: 95%;
   height: 100%;
   background: #ffffff;
-  border-radius: 10px;
-  border: 5px solid #00b8a9;
+  border: 1px solid #ffffff;
   padding: 5px;
   color: black;
   font-family: "Rubik", sans-serif;
   font-size: 24px;
+  border-radius: 10px;
+  outline: none;
+  
 }
+
+
 .search-button {
   position: relative;
   width: 50px;
@@ -75,7 +94,8 @@ nav {
   justify-content: center;
   cursor: pointer;
   font-size: 43px;
-  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+  mix-blend-mode: darken;
+  
 }
 .search-button:hover {
   transform: translateY(-10%);
@@ -83,12 +103,14 @@ nav {
 #user {
   position: relative;
   background: #ffde7d;
-  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+  mix-blend-mode: darken;
   cursor: pointer;
-  /* right: -3% */
+  right: -7%;
+  scale: 70%;
 }
 #user:hover {
   transform: translateY(-10%);
+ 
 }
 #hamburger:hover {
   transform: translateY(-10%);
@@ -98,19 +120,21 @@ nav {
   background: #ffde7d;
   mix-blend-mode: darken; /* gets rid of white background of jpg file*/
   cursor: pointer;
+  scale: 70%;
   /* right: -5%; */
 }
 .grid {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 30%);
-  grid-template-rows: repeat(2, 100%);
+  grid-template-rows: repeat(2, 70%);
   padding-top: 5%;
   gap: 50px;
   width: 100%;
   margin: 0;
 }
 .game {
+  
   position: relative;
   display: flex;
   background: #f6416c;
@@ -123,20 +147,22 @@ nav {
 }
 .game:hover {
   transform: scale(105%);
+  opacity: 90%;
 }
 .game i {
   position: relative;
-  font-size: 5rem;
+  font-size: 7rem;
   color: #ffde7d;
 }
 .game p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
   position: relative;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   color: black;
   text-align: center;
 }
 .top-section {
-  /* margin: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +174,7 @@ nav {
 
 .hangman-image {
   position: relative;
-  mix-blend-mode: darken; /* gets rid of white background of jpg file*/
+  mix-blend-mode: darken;
   display: flex;
   height: 130%;
   width: 40%;
@@ -170,12 +196,13 @@ nav {
   text-align: center;
   color: #ffde7d;
   width: 100%;
-  font-size: 40px;
+  font-size: 2.2rem;
   background-color: #00b8a9;
   cursor: pointer;
 }
 .letter:hover {
   scale: 105%;
+  opacity: 0.5;
 }
 .word-container {
   display: grid;
@@ -190,28 +217,30 @@ nav {
 }
 #country-container,
 #capital-container {
+
   display: flex;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 300%;
+  font-family: 'Press Start 2P', cursive;
 }
 
 /* reset button */
 
 #reset-btn {
+  font-family: "Kalam", cursive;
   background-color: #00b8a9;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 26.1%;
-  left: 57.3%;
+  bottom: 25.1%;
+  left: 57%;
   width: 19.5%;
-  height: 5.9%;
-  font-size: 1.5rem;
+  height: 6.9%;
 }
 #reset-btn:hover {
   background-color: #f6416c;
@@ -221,20 +250,20 @@ nav {
 }
 
 #modal-btn {
+  font-family: "Kalam", cursive;
   background-color: #00b8a9;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 26.1%;
-  left: 77%;
-  width: 19.5%;
-  height: 5.9%;
-  font-size: 1.5rem;
+  bottom: 25.1%;
+  left: 76.8%;
+  width: 19.7%;
+  height: 6.9%;
 }
 #modal-btn:hover {
   background-color: #f6416c;
@@ -271,17 +300,32 @@ nav {
   padding: 3%;
 }
 
-#modal-text {
+.modal-contents i {
   position: relative;
-  top: -15%;
-  color: #ffde7d;
   font-size: 2.5rem;
+  top: -23%;
+  left: 50%;
+  color: #ffde7d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-contents i:hover {
+  color: #f6416c
+}
+
+#modal-text {
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  top: -23%;
+  color: #ffde7d;
+  font-size: 2.2rem;
   text-align: center;
 }
 
 #add-form {
   position: relative;
-  top: -15%;
+  top: -22%;
   display: flex;
   flex-direction: column;
   height: 20%;
@@ -290,7 +334,7 @@ nav {
 }
 
 .input {
-  font-size: 2.5rem;
+  font-size: 2rem;
   height: 100%;
   padding: 3%;
   border-radius: 15px;
@@ -308,6 +352,13 @@ nav {
   background-color: #f6416c;
   border: solid #f6416c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#input-btn:hover{
+  scale: 105%;
+  background-color: #ffde7d;
 }
 
 .hidden {
@@ -315,8 +366,9 @@ nav {
 }
 
 #scores {
+  font-family: 'Press Start 2P', cursive;
   flex-direction: column;
-  font-size: 2.8rem;
+  font-size: 2rem;
   position: absolute;
   top: 80%;
   left: 2%;
@@ -352,7 +404,8 @@ a:hover {
 }
 
 .dropdown_menu.open {
-  height: 21%;
+  height: 23.5%;
+  border: solid #f8f3d4 2px;
 }
 
 .dropdown_menu li {

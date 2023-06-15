@@ -15,14 +15,17 @@
 
   <body>
     <nav>
-      <img
+      
+
+      <div id="logo">Brainville
+       
+        <img
         id="brain"
-        src="images/Vector.jpg"
+        src="images/Vector.png"
         alt="animated brain"
         style="width: 150px"
       />
-
-      <div id="logo">Brainville</div>
+      </div>
 
       <div class="searchbar">
         <input class="search-input" type="text" placeholder="Search... " />
@@ -58,20 +61,24 @@
     </div>
     <section id="games" class="grid">
       <div id="rcorners1" class="game">
+        <p>Hangman</p>
         <i class="fa-solid fa-earth-americas"></i>
-        <p>Hangman - Countries and Capitals</p>
+        <p>Countries and Capitals</p>
       </div>
       <div id="rcorners2" class="game">
+        <p>Hangman</p>
         <i class="fa-solid fa-language"></i>
-        <p>Hangman - Italian Nouns</p>
+        <p>Italian Nouns</p>
       </div>
       <div id="rcorners3" class="game">
+        <p>Guess Who</p>
         <i class="fa-solid fa-book"></i>
-        <p>Guess Who - English Kings</p>
+        <p>English Kings & Queens</p>
       </div>
       <div id="rcorners4" class="game">
+        <p>Translating Race </p>
         <i class="fa-solid fa-language"></i>
-        <p>Translating Race - Italian Nouns</p>
+        <p>Italian Nouns</p>
       </div>
     </section>
 
@@ -125,12 +132,15 @@
       </div>
       <div id="scores">
         <p id="win-count">Win Count :</p>
+        <br>
         <p id="loss-count">Loss Count :</p>
+        <br>
         <p id="win-percent">Win % :</p>
       </div>
     </section>
     <div class="modal hidden" id="modal">
       <div class="modal-contents">
+        <i id="modal-close" class="fa-solid fa-square-xmark"></i>
         <p id="modal-text">Input new country and capital</p>
         <form id="add-form">
           <input

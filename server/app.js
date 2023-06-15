@@ -45,6 +45,10 @@ app.post("/geography", (req, res) => {
       res.sendStatus(409);
       return;
     }
+    if (newCountry.country === "" || newCountry.capital === "") {
+      res.sendStatus(404)
+      return
+    }
   }
   geography.push(newCountry);
   res.status(201).send(newCountry);
