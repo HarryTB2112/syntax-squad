@@ -1,6 +1,6 @@
 # BrainVille
 
-## Project Description:
+## PROJECT DESCRIPTION:
 
 A website with 4 games; "Hangman Countries and Capitals", "Hangman Italian nouns", "Guess who English Kings and Queens" and "Translating race Italian nouns". Currently, only "Hangman Countries and Capitals" has been implemented.
 The game is hidden underneath the main page which can be entered by clicking the top left red curved square.
@@ -40,7 +40,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 #### HOW TO OPEN THE BACKEND:
 
-- Go to your chosen browser, enter the URL: [API](http://localhost:3002).
+- Click the following link: [API](http://localhost:3002).
 - You can check the roots:
   - /geography
   - /geography/random
