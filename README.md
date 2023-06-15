@@ -64,7 +64,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-![Homepage](src*="/client/images/Homepage.png"){
+img[src*="/client/images/Homepage.png"]{
    width:3rem;
    height:3rem;
 }
