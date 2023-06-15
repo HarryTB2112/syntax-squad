@@ -213,8 +213,12 @@ function addApi(data) {
 
 // Checks letter clicked to see if it is correct or incorrect, changes color, checks for duplicates, calls Win or Lose functions
 function checkLetter() {
-  // Creatte clicked letter variable
+  // Create clicked letter variable
   const clickedLetter = event.target;
+
+  console.log(capitalLetters)
+  console.log(countryLetters)
+  
 
   // Check if letter has already been clicked
   if (!clickedLetters.includes(clickedLetter.textContent)) {
@@ -270,11 +274,6 @@ function checkLetter() {
       // Push incorrect letter to wrong letters array
       wrongLetters.push(clickedLetter.textContent);
     }
-    console.log(clickedLetters)
-    console.log(clickedLetter)
-    console.log(currentImg)
-    console.log(wrongLetters)
-
     // Give loss alert if on final image
     if (currentImg === "images/Hangman7.jpg") {
       setTimeout(lossAlert, 300);
@@ -309,8 +308,11 @@ function lossAlert() {
 
 // Displays alert when game is won
 function checkWin() {
+
+  filteredCountry = countryLetters.filter(letter => letter !== " ")
+  filteredCapital = capitalLetters.filter(letter => letter !== " ")
   // Check if game is completed
-  if (countryLetters.length + capitalLetters.length === clickedLetters.length) {
+  if (filteredCountry.length + filteredCapital.length === clickedLetters.length) {
     // Iterate win count and update scores
     winCount++;
     updateWins();

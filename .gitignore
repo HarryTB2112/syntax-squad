@@ -2,7 +2,7 @@
 
 
 # ALL NODE_MODULES FOLDERS, AND FILES AND FOLDERS IN ANY NODE_MODULES FOLDER.
-**/node_modules
+server/node_modules
 
 
 # package-lock.json FILE

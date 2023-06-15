@@ -1,8 +1,4 @@
-<!-- this is a draft -->
-
-## Project Title: 
-
-BrainVille
+# BrainVille
 
 ## Project Description:
 
@@ -67,17 +63,17 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 #### HOW TO USE THE WEBSITE:
 
-<!-- insert screenshot of the main page OR save homepage as pdf then give link to pdf here 
-ONCE IT IS FINISHED, PREFERABLY FROM DAN'S POV-->
+###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-###### How to enter the game:
+![Homepage](\client\images\homepage.png)
+![Hangman-page](\client\images\hangman-game.png)
+
+###### HOW TO ENTER THE GAME:
 
 Click ![Hangman: Countries and Capitals](\client\images\game1.PNG)
 Then, you should see the hangman page.
-<!-- insert screenshot of the hangman page OR save hangman page as pdf then give link to pdf here
-ONCE IT IS FINISHED, PREFERABLY FROM DAN'S POV-->
 
-###### How to play the game:
+###### HOW TO PLAY THE GAME:
 
 **REALLY IMPORTANT: Have the server running in the background**
 
@@ -114,9 +110,7 @@ OR ```git add <folder-name/file-name>``` to add a specific file
 
 ## PROCESS:
 
-This is a POST req to add countries and capitals - connecting front-end and back-end ;
-
-<!-- get snippet of code look nice -->
+This is a POST req to add countries and capitals - connecting front-end and back-end.
 
 ```
 async function createNewWord(e) {
@@ -136,6 +130,7 @@ async function createNewWord(e) {
   };
 }
 ```
+
 ## LICENSE:
 
 ISC license
@@ -146,6 +141,12 @@ Some functionality of the Hangman game was tricky to implement, such as not allo
 
 At the start of the project, git usage was tricky as there were often merge conflicts. However, through time and practice these problems came up less and less.
 
+Countries and Capitals with spaces in the name were a problem, as they would display the space as an underscore to be guessed. Additionally they would count towards the amount of letters you need to get correct to win. We got over the first problem by checking if an element in the array was a space ```" "``` and displaying a ```"&nbsp;``` in the html. The second problem we got over by filtering out the spaces from the arrays in the checkWin function.
+
 ## Bugs:
 
-<!-- any bugs? -->
+There are no known bugs. However, some of the elements have not yet been implemented e.g. User Page.
+
+## FUTURE FEATURES:
+
+We would implement the other 3 games we had concepted and come up with new ideas for games. We would create a leaderboard and scoring system for each games for classmates to compete.
