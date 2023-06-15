@@ -17,7 +17,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 - Click on the github repo link above.
 - Fork the repo (top right of the page)
 - Go to your forked repo, it will now say `<your-github-username>syntax-squad`
-- Click the <span style="color: green;">"Code" button</span> and copy the **SSH** option if you have already setup git in your terminal, or the **HTTPS** option if not.
+- Click the green "code" button and copy the **SSH** option if you have already setup git in your terminal, or the **HTTPS** option if not.
 
 #### IN TERMINAL: (GITBASH FOR WINDOW USERS OR TERMINAL FOR MAC USERS)
 
@@ -64,14 +64,14 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-<img src='/client/images/Homepage.png' width='100'>
-<img src='/client/images/Hangman-page.png' width='100'>
+<img src='/client/images/Homepage.png' width='300'>
+<img src='/client/images/Hangman-page.png' width='300'>
 
 ###### HOW TO ENTER THE GAME:
 
 Click 
 <br>
-<img src='/client/images/game1.PNG' width='100'>
+<img src='/client/images/game1.PNG' width='300'>
 <br>
 Then, you should see the hangman page.
 
