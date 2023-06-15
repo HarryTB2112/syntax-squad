@@ -65,8 +65,8 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-![Homepage](\client\images\homepage.png)
-![Hangman-page](\client\images\hangman-game.png)
+![Homepage](\client\images\Homepage.png)
+![Hangman-page](\client\images\Hangman-page.png)
 
 ###### HOW TO ENTER THE GAME:
 
