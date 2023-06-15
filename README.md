@@ -40,7 +40,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 #### HOW TO OPEN THE BACKEND:
 
-- Click the following link: [API](http://localhost:3002).
+- Click the following link: [API](http://localhost:3002)
 - You can check the roots:
   - /geography
   - /geography/random
