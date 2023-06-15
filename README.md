@@ -64,7 +64,7 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
 ###### SCREENSHOTS OF THE HOMEPAGE AND THE HANGMAN PAGE.
 
-![Homepage](/client/images/Homepage.png =50x50)
+![Homepage](/client/images/Homepage.png | width=50)
 ![Hangman-page](/client/images/Hangman-page.png =50x50)
 
 ###### HOW TO ENTER THE GAME:
@@ -99,7 +99,6 @@ Then, you should see the hangman page.
 - Finally, run `git push`
 - Make a "Pull Request" to merge it to the original repository and request review.
 
-//
 
 ## TECHNOLOGIES:
 
