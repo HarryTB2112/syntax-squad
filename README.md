@@ -3,7 +3,7 @@
 ## PROJECT DESCRIPTION:
 
 A website with 4 games; "Hangman Countries and Capitals", "Hangman Italian nouns", "Guess who English Kings and Queens" and "Translating race Italian nouns". Currently, only "Hangman Countries and Capitals" has been implemented.
-The game is hidden underneath the main page which can be entered by clicking the top left red curved square.
+The game is hidden underneath the main page which can be entered by clicking the red curving square in the upper left.
 
 The point of these games is to increase interest in NON-STEM subjects in secondary schools.
 This project was requested by the management team of the Hive group of secondary schools.
@@ -12,27 +12,27 @@ This project was requested by the management team of the Hive group of secondary
 
 GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 
-##### GITHUB INITIAL STEPS:
+#### GITHUB INITIAL STEPS:
 
 - Click on the github repo link above.
-- Fork the repo (top right of the page)
-- Go to your forked repo, it will now say `<your-github-username>syntax-squad`
+- Fork the repo (top right of the page).
+- Go to your forked repo, it will now say `<your-github-username>syntax-squad`.
 - Click the green "code" button and copy the **SSH** option if you have already setup git in your terminal, or the **HTTPS** option if not.
 
 #### IN TERMINAL: (GITBASH FOR WINDOW USERS OR TERMINAL FOR MAC USERS)
 
-- Go to the directory you want to clone in
-- Run `git clone <SSH key or HTTPS key>`
-- Then, `cd syntax-squad`
-- Check branch is main using `git branch` otherwise `git checkout main`
+- Go to the directory you want to clone in.
+- Run `git clone <SSH key or HTTPS key>`.
+- Then, `cd syntax-squad`.
+- Check branch is main using `git branch` otherwise `git checkout main`.
 - Run `ls` to check files & folders which should have a "server" folder, "client" folder and "README.md" file.
-- To open VS code, `code .`
+- To open VS code, `code .`.
 
 #### HOW TO RUN BACKEND:
 
-- cd into the cloned directory in your terminal
-- Again, check branch is main using `git branch` otherwise `git checkout main`
-- Then, run `cd server`
+- cd into the cloned directory in your terminal.
+- Again, check branch is main using `git branch` otherwise `git checkout main`.
+- Then, run `cd server`.
 - Run `npm install`
 - Run `npm run dev`
 
@@ -50,14 +50,14 @@ GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
 #### HOW TO RUN FRONTEND:
 
 - Open another terminal
-- cd into your directory that contains syntax-squad folder
+- cd into your directory that contains syntax-squad folder.
 - Run `cd syntax squad`
-- Run `code .` to open it in VS code
+- Run `code .` to open it in VS code.
 
 #### HOW TO OPEN FRONTEND:
 
 - Check the extension "Live Server" is installed on VS code otherwise install it.
-- Open the explorer section in VS code, then open the "client" folder
+- Open the explorer section in VS code, then open the "client" folder.
 - Right click "index.html" and click on "Open with Live Server". It will redirect you to your browser.
 
 #### HOW TO USE THE WEBSITE:
@@ -90,14 +90,14 @@ Then, you should see the hangman page.
 #### IF YOU CREATE A CHANGE IN ANY OF THE FILES:
 
 - Go to your terminal
-- Run `git status` and check files are red
+- Run `git status` and check files are red.
 - Run `git add .` to add **all** files
   OR `git add <folder-name>` to add a specific folder
   OR `git add <folder-name/file-name>` to add a specific file
-- Run `git status` again and check files are green
+- Run `git status` again and check files are green.
 - Then, commit by `git commit -m "<message>"`.
-- Finally, run `git push`
-- Make a "Pull Request" to merge it to the original repository and request review.
+- Finally, run `git push`.
+- Make a "Pull Request" to merge it to the original repository and request a review.
 
 
 ## TECHNOLOGIES:
@@ -106,7 +106,7 @@ Then, you should see the hangman page.
 - CSS
 - Javascript
 - API (.json files)
-- [Figma Frameworks](https://www.figma.com/file/ZWZXKNWeLBZqYAEDCQDGbX/Hangman?type=design&node-id=0%3A1&t=KlhuUEeRTDZebxyR-1)
+- [Figma](https://www.figma.com/file/ZWZXKNWeLBZqYAEDCQDGbX/Hangman?type=design&node-id=0%3A1&t=KlhuUEeRTDZebxyR-1)
 - Express.js
 
 ## PROCESS:
