@@ -238,14 +238,14 @@ nav {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 26.7%;
-  left: 57%;
-  width: 19.5%;
-  height: 5.3%;
+  bottom: 27%;
+  left: 57.4%;
+  width: 19.3%;
+  height: 5.1%;
 }
 #reset-btn:hover {
   background-color: #f6416c;
@@ -261,14 +261,14 @@ nav {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 26.7%;
-  left: 76.8%;
-  width: 19.7%;
-  height: 5.3%;
+  bottom: 27%;
+  left: 77.1%;
+  width: 19.3%;
+  height: 5.1%;
 }
 #modal-btn:hover {
   background-color: #f6416c;
