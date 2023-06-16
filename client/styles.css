@@ -63,7 +63,7 @@ nav {
   border-radius: 10px;
   border: 3px #00b8a9 solid;
   scale: 60%;
-  right: -32%;
+  right: -30.8%;
 }
 .search-input {
   position: relative;
@@ -100,10 +100,10 @@ nav {
   position: relative;
   color: #00b8a9;
   size: 5rem;
-  top: 0;
+  top: -1;
   cursor: pointer;
-  right: -13.5%;
-  scale: 217%;
+  right: -8.5%;
+  scale: 213%;
   z-index: 10;
 }
 #user:hover {
@@ -115,8 +115,8 @@ nav {
   size: 5rem;
   top: 0;
   cursor: pointer;
-  right: -13.5%;
-  scale: 217%;
+  right: -17%;
+  scale: 190%;
   z-index: 10;
 }
 
