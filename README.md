@@ -10,8 +10,6 @@ This project was requested by the management team of the Hive group of secondary
 
 ## INSTALLATION & USAGE:
 
-GITHUB REPO: https://github.com/HarryTB2112/syntax-squad/
-
 #### GITHUB INITIAL STEPS:
 
 - Click on the github repo link above.
