@@ -1,5 +1,4 @@
-{
-  "countries": [
+[
     {
       "country": "China",
       "capital": "Beijing"
@@ -10,7 +9,7 @@
     },
     {
       "country": "United States",
-      "capital": "Washington, D.C."
+      "capital": "Washington DC"
     },
     {
       "country": "Indonesia",
@@ -22,7 +21,7 @@
     },
     {
       "country": "Brazil",
-      "capital": "Brasília"
+      "capital": "Brasilia"
     },
     {
       "country": "Nigeria",
@@ -61,10 +60,6 @@
       "capital": "Hanoi"
     },
     {
-      "country": "DR Congo",
-      "capital": "Kinshasa"
-    },
-    {
       "country": "Turkey",
       "capital": "Ankara"
     },
@@ -97,10 +92,6 @@
       "capital": "Dodoma"
     },
     {
-      "country": "South Africa",
-      "capital": "Pretoria, Cape Town, Bloemfontein"
-    },
-    {
       "country": "Myanmar",
       "capital": "Naypyidaw"
     },
@@ -110,7 +101,7 @@
     },
     {
       "country": "Colombia",
-      "capital": "Bogotá"
+      "capital": "Bogota"
     },
     {
       "country": "Kenya",
@@ -189,10 +180,6 @@
       "capital": "Accra"
     },
     {
-      "country": "Yemen",
-      "capital": "Sana'a"
-    },
-    {
       "country": "Nepal",
       "capital": "Kathmandu"
     },
@@ -201,4 +188,3 @@
       "capital": "Luanda"
     }
   ]
-}

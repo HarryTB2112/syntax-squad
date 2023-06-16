@@ -1,0 +1,9 @@
+# THESE ARE FILES WHICH GIT HAS BEEN EXPLICITLY TOLD TO IGNORE.
+
+
+# ALL NODE_MODULES FOLDERS, AND FILES AND FOLDERS IN ANY NODE_MODULES FOLDER.
+server/node_modules
+
+
+# package-lock.json FILE
+server/package-lock.json

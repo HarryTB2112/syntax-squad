@@ -1,11 +1,150 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=å, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="./images/icon.ico" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Brainville</title>
   </head>
-  <body></body>
+
+  <body>
+    <nav>
+      <div id="logo">
+        Brainville
+
+        <img id="brain" src="images/Vector.png" alt="animated brain" />
+      </div>
+
+      <div class="searchbar">
+        <input class="search-input" type="text" placeholder="Search... " />
+        <img
+          id="mglass"
+          src="images/mglass.jpg"
+          alt="search symbol"
+          class="search-button"
+        />
+      </div>
+
+      <i id="trophy" class="fa-solid fa-trophy"></i>
+      <i id="user" class="fa-solid fa-robot"></i>
+
+      <img id="hamburger" src="images/Hamburger.jpg" alt="options symbol" />
+    </nav>
+    <div class="dropdown_menu" id="dropdown-menu">
+      <li><a id="dropdown-home" href="#">Home</a></li>
+      <hr />
+      <li><a href="about">About</a></li>
+      <hr />
+      <li><a href="services">Services</a></li>
+      <hr />
+      <li><a href="contact">Contact</a></li>
+    </div>
+    <section id="games" class="grid">
+      <div id="rcorners1" class="game">
+        <p>Hangman</p>
+        <i class="fa-solid fa-earth-americas"></i>
+
+        <p>Countries and Capitals</p>
+      </div>
+      <div id="rcorners2" class="game">
+        <p>Hangman</p>
+        <i class="fa-solid fa-language"></i>
+        <p>Italian Nouns</p>
+      </div>
+      <div id="rcorners3" class="game">
+        <p>Guess Who</p>
+        <i class="fa-solid fa-book"></i>
+        <p>English Kings & Queens</p>
+      </div>
+      <div id="rcorners4" class="game">
+        <p>Translating Race</p>
+        <i class="fa-solid fa-language"></i>
+        <p>Italian Nouns</p>
+      </div>
+    </section>
+
+    <section id="hangman-game" class="hangman hidden">
+      <div class="top-section">
+        <img
+          id="hangman-image"
+          class="hangman-image"
+          src="images/Hangman1.jpg"
+          alt="hangman image"
+        />
+
+        <div id="letter-grid" class="letter-grid">
+          <p id="A" class="letter">A</p>
+          <p id="B" class="letter">B</p>
+          <p id="C" class="letter">C</p>
+          <p id="D" class="letter">D</p>
+          <p id="E" class="letter">E</p>
+          <p id="F" class="letter">F</p>
+          <p id="G" class="letter">G</p>
+          <p id="H" class="letter">H</p>
+          <p id="I" class="letter">I</p>
+          <p id="J" class="letter">J</p>
+          <p id="K" class="letter">K</p>
+          <p id="L" class="letter">L</p>
+          <p id="M" class="letter">M</p>
+          <p id="N" class="letter">N</p>
+          <p id="O" class="letter">O</p>
+          <p id="P" class="letter">P</p>
+          <p id="Q" class="letter">Q</p>
+          <p id="R" class="letter">R</p>
+          <p id="S" class="letter">S</p>
+          <p id="T" class="letter">T</p>
+          <p id="U" class="letter">U</p>
+          <p id="V" class="letter">V</p>
+          <p id="W" class="letter">W</p>
+          <p id="X" class="letter">X</p>
+          <p id="Y" class="letter">Y</p>
+          <p id="Z" class="letter">Z</p>
+        </div>
+        <button id="reset-btn">Reset</button>
+        <button id="modal-btn">Add More!</button>
+      </div>
+      <div id="underscore-container" class="word-container">
+        <div id="country-container">
+          <p>Country:</p>
+        </div>
+        <div id="capital-container">
+          <p>Capital:</p>
+        </div>
+      </div>
+      <div id="scores">
+        <p id="win-count">Win Count :</p>
+        <br />
+        <p id="loss-count">Loss Count :</p>
+        <br />
+        <p id="win-percent">Win % :</p>
+      </div>
+    </section>
+    <div class="modal hidden" id="modal">
+      <div class="modal-contents">
+        <i id="modal-close" class="fa-solid fa-square-xmark"></i>
+        <p id="modal-text">Input new country and capital</p>
+        <form id="add-form">
+          <input
+            id="countryInput"
+            type="text"
+            placeholder="country"
+            class="input"
+          />
+          <input
+            id="capitalInput"
+            type="text"
+            placeholder="capital"
+            class="input"
+          />
+          <input id="input-btn" type="submit" value="Create" />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
